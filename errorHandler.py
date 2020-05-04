@@ -33,8 +33,10 @@ def not_black(x):
 def id_value_handler():
     while True:
         try:
+            global confirm_id
             login.confirm_id = int(input("Enter your user id: "))
-            return
+            confirm_id = login.confirm_id
+            return confirm_id
         except ValueError:
             print("Sorry, that is not allowed <<Invalid Entry err>>")
             continue
@@ -44,8 +46,10 @@ def id_value_handler():
 def pin_value_handler(pass_id):
     while True:
         try:
+            global confirm_pin
             login.confirm_pin = int(input("Welcome Back," + str(pass_id) + ", Enter your user pin: "))
-            return
+            confirm_pin = login.confirm_pin
+            return confirm_pin
         except ValueError:
             print("Sorry, that is not allowed <<Invalid Entry err>>")
 
