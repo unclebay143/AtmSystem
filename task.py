@@ -14,6 +14,11 @@ def task_for_customers():
     collect_task = input("")
     if int(collect_task) == "":
         errorHandler.not_black("Task")
-
     elif int(collect_task) == 1:
+        balance.current_balance()
+    elif int(collect_task) == 2:
+        deposit.customer_deposit()
+    elif int(collect_task) == 3:
+        pass
+    elif int(collect_task) == 4:
         pass
